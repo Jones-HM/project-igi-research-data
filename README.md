@@ -43,7 +43,7 @@ IGI-Research-Data 🕵️‍♂️ is a repository that contains all the researc
 | 📊 IGI-GraphEditor      | Powerful tool to view/edit game Graphp files (e.g., Graph4019.dat) and analyze nodes, links, and vertices of graphs | Jones-HM |
 | 📋 IGI-Natives-Info     | Tool to view game native methods and get info about their signature and hash | Jones-HM |
 | 🖼️ IGI-TGaConvertor              | Texture converter for objects (e.g., wood_material.tex, concrete_bullet.tex) to convert to PNG format | Jones-HM |
-
+| 🖼️ IGI-Language-Mod              | Language Mod copy Tools/english.zip to C:/IGI/language and restart the game | Jones-HM |
 
 ## Templates - Section
 ### `Templates` section contains templates for [010 Editor](https://www.sweetscape.com/010editor/) for both IGI1 and IGI2 game.
