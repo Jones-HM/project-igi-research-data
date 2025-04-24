@@ -632,15 +632,24 @@
                 "note": "Checks if current player profle is active."
             }
         },
-		{
-			"Native": {
-				"hash": "00416D80",
-				"address": 4287872,
-				"name": "EnablePlayerHit",
-				"signature": "int EnablePlayerHit()",
-				"note": "Set (0057BABC + 0xE1) value to 0 for Enable, 1 for Disable"
-			}
-		},
+	{
+		"Native": {
+			"hash": "00416D80",
+			"address": 4287872,
+			"name": "EnablePlayerHit",
+			"signature": "int EnablePlayerHit()",
+			"note": "Set (0057BABC + 0xE1) value to 0 for Enable, 1 for Disable"
+		}
+	},
+	{
+	  "Native": {
+	    "hash": "00471F60",
+	    "address": 4653664,
+	    "name": "EnemyDetectorOverlay",
+	    "signature": "uint32_t EnemyDetectorOverlay(int contextBase, int targetAddr, float sortingDistance, int configFlag, int *screenPosition, int eventParam, int extraParam1, int extraParam2)",
+	    "note": "Shows red box on enemy when using binoculars. Params: contextBase=AI/render base (e.g. 0x01A3F4C0), targetAddr=target address (e.g. 0x00472C50), sortingDistance=float (e.g. 12.5), configFlag=overlay type (e.g. 1), screenPosition=out vec2 ptr, eventParam/extraParam1/extraParam2=optional (0)."
+	  }
+	},
         {
             "Native": {
                 "name": "SoldierExecute",
