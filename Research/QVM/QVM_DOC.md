@@ -10,10 +10,10 @@ The **QVM** are not **readable** to make them **readable** we need to **decompil
 Most QVM files start with the ASCII signature `LOOP`. They vary in internal layout: object files use task trees (`objects.qvm`), while AI scripts are logic-based (`ai.qvm`). File sizes range from 270 bytes to 990 KB.</br>
 
 
-## What Are QSC and QAS?
+## What Are QSC and QAS file formats?
 
-- **QSC**: Human-readable source script written in C-style syntax.
-- **QAS**: Intermediate assembly generated from QSC during build.
+- **QSC**: Human-readable source script written in _C-style_ syntax.
+- **QAS**: Intermediate assembly generated from _QSC_ during build.
 - **QVM**: Final compiled binary executed by the game engine.
 
 These files follow this path:
@@ -45,7 +45,7 @@ QAS is only generated if a flag is set during compilation.
 
 This header defines where tables for integers, strings, and bytecode instructions are located inside the file.
 
-## Opcodes (Selected)
+## Opcodes Information
 
 | Hex | Name  | Description                            |
 |-----|-------|----------------------------------------|
@@ -55,7 +55,7 @@ This header defines where tables for integers, strings, and bytecode instruction
 
 These are basic commands interpreted by the virtual machine to control flow and data handling.
 
-## objects.qvm – Task-Based Structure
+## Task-Based Structure - objects.qvm
 
 `objects.qvm` uses recursive task trees built using:
 - `Task_DeclareParameters`: Defines expected types
@@ -63,12 +63,12 @@ These are basic commands interpreted by the virtual machine to control flow and 
 
 Example:
 ```c
-Task_New(-1, "Container", "Trees", Task_New(-1, "EditRigidObj", "", 24977198.0, -55751300.0, 174413136.0, 0, 0, 0.6645680069923401, "905_01_1", 1, 1, 1, 0, 0, 0))
+Task_New(-1, "EditRigidObj", "", 24977198.0, -55751300.0, 174413136.0, 0, 0, 0.6645680069923401, "905_01_1", 1, 1, 1, 0, 0, 0)
 ```
 
 Each child task can be referenced via ID later in scripts.
 
-## ai.qvm – Script-Based Logic
+## Script-Based Logic - ai.qvm
 
 AI logic lives in `ai.qvm`. These are QSC scripts that use C-like syntax with conditionals, functions, and logical operators.
 
