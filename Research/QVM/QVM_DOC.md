@@ -94,8 +94,10 @@ Project IGI is split into two major versions — **IGI 1** and **IGI 2**, each u
 
 IGI 1 uses the `QVM 0.5` format, which contains structured bytecode for various game elements like AI, human characters, and objects. Each type of QVM file may have a different internal layout depending on its use case.
 
+### Decompiler
 There is no official SDK, compiler, or decompiler available for this version. However, an unofficial tool called [DConv](https://github.com/NEWME0/Project-IGI/tree/master/tools/dconv), created by modder **Artiom**, can successfully decompile IGI 1 QVM files into readable QSC (source code). It also supports conversion between QVM 0.5 and QVM 0.7, helping bridge the gap between the two IGI versions.
 
+### Compiler
 For compiling IGI 1 files, there has been recent progress a **DLL based compiler** [IGI-Compiler](https://github.com/Jones-HM/project-igi-editor/blob/develop/IGIEditor/QCompiler.cs#L119) with [Native-method](https://github.com/search?q=repo%3AJones-HM%2Fproject-igi-internals%20QSCRIPT_COMPILE&type=code) thanks to a discovery by **Jones-HM**. He found a way to compile files directly inside the game by using **DLL injection** to call the game’s internal compilation functions. This method is fast, doesn't require external tools, and is now used in the **Project IGI Editor**.
 
 ---
@@ -104,6 +106,6 @@ For compiling IGI 1 files, there has been recent progress a **DLL based compiler
 
 IGI 2 uses the newer `QVM 0.7` format, which has a completely different structure from IGI 1. The two formats are incompatible, meaning you cannot use QVM files from one version in the other.
 
-Unlike IGI 1, IGI 2 comes with an **official SDK** that includes a powerful tool called `GConv`. This tool allows full decompilation and compilation of QVM files to QSC and back again. It is widely used for mod development and scripting support.
+Unlike IGI 1, IGI 2 comes with an **[official SDK](https://www.nexusmods.com/igi2covertstrike/mods/1)** that includes a powerful tool called [GConv](https://www.gamepressure.com/download/igi-2-covert-strike-map-editor-mod/zbbfc). This tool allows full decompilation and compilation of QVM files to QSC and back again. It is widely used for mod development and scripting support.
 
 Despite having official tools, GConv is not always user-friendly or well-documented, so community tools and documentation continue to play a big role in expanding modding support.
