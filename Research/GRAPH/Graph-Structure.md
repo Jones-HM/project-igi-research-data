@@ -8,7 +8,7 @@ Project I.G.I 1 Graph Structure of Vertex,Edges and other data. (IGI Струк�
 
 
 STATIC ANALYSIS SECTION - (РАЗДЕЛ СТАТИЧЕСКОГО АНАЛИЗА)
-* Graph Hex Signatures on files `Graphs.dat`
+* Graph Hex Signatures on files `graphs.dat`
 * Here all data could be found at static index i.e [current_index + 8] 
 * example Node Material '0429' index is 20 then [20 + 8] = 28, Read DataType of 4 or 8 Bytes.
 
@@ -31,7 +31,8 @@ RUNTIME ANALYSIS SECTION - (РАЗДЕЛ АНАЛИЗА РАБОТЫ)
 * Graph Nodes data sequence extracted by IDA/Ghidra. (обратный инжиниринг)
 * Sub = Game sub routine(Method) to extract the data.
 * Sub_004FAEE0 here`004FAEE0` is actual address of this game method.
-* Game variables prefix 'nMaxNodes' here n = Int, v = Float,e = String ??
+* Game variables prefix this is Hungarian notation in C++ game engine 'nMaxNodes' here n = `Number/Int`, v = `Vector/Float`, e = `Enum/String`, t = `Struct/Type`
+
 
 | S.No | Node Type       | Method Sub     |
 |------|-----------------|----------------|
